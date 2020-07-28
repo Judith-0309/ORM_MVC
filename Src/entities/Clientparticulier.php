@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 class Clientparticulier
 {
-    //Pour les clés primaires
+    //Pour la clé primaire
     /** @ORM\Id @ORM\Column(type="integer") @ORM\GeneratedValue **/
      
     private $id;
@@ -32,7 +32,7 @@ class Clientparticulier
     private $salarie_actuel;
      /** @ORM\Column(type="decimal") **/ 
     private $nom_employeur;
-     /** @ORM\Column(type="text") **/ 
+     /** @ORM\Column(type="string") **/ 
     private $cni;
     private $numeroCompte;
     /** @ORM\Column(type="string") **/ 

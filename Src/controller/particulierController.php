@@ -25,7 +25,7 @@ if(isset($_POST['envoyer'])){
        $client_particulier->setCni($_POST["cni"]);
 
     $a= $principal->Add($client_particulier);
-    //Si l'insertion marche qu'il nous retourne lavaleur de a
+    //Si l'insertion marche qu'il nous retourne la valeur de a
     if($a!=null){
         echo "insertion reussie";
     } else {

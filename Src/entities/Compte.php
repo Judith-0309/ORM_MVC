@@ -9,14 +9,17 @@ class Compte
 
     private $id;
      /** @ORM\Column(type="string") **/
+
     private $typeCompte;
      /** @ORM\Column(type="string") **/
+
     private $idEntreprise;
+      
+    
+    private $idClientPhysique;
       /**
         * @ORM\ManyToOne(targetEntity="Clientparticulier",inversedBy="compte")
       */
-    private $idClientPhysique;
-     /** @ORM\Column(type="string") **/
     private $NumeroCompte;
      /** @ORM\Column(type="string") **/
     private $CleRib;
@@ -62,13 +65,13 @@ class Compte
         $this->idEntreprise=$idEntreprise;
     }
 
-    public function getIdClientPhysique()
+    public function getIdClientparticulier()
     {
-        return $this->idClientPhysique;
+        return $this->idClientparticulier;
     }
-    public function setIdClientPhysique($idClientPhysique)
+    public function setIdClientparticulier($Clientparticulier)
     {
-        $this->idClientPhysique=$idClientPhysique;
+        $this->idClientparticulier=$idClientparticulier;
     }
 
         public function getNumeroCompte()
