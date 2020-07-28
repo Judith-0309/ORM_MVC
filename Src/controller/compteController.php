@@ -20,17 +20,17 @@ if(isset($_POST)){
         $Ouv_compte->setDateOuverture($_POST["DateOuverture"]);
 
         $b= $compte->Add($Ouv_compte);
-        var_dump($b);
-        //die;
+        //var_dump($b);
+        
         //Si l'insertion marche qu'il nous retourne la valeur de a
-        //if($b!=null)
-        //{
-          //  echo "insertion reussie";
-        //} 
-        //else 
-        //{
-          //  echo "echec d'insertion";
-       // }
+        if($b!=null)
+        {
+           echo "insertion reussie";
+        } 
+        else 
+        {
+           echo "echec d'insertion";
+       }
     }
       
         ?>

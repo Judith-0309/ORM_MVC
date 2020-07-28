@@ -6,30 +6,32 @@ use Doctrine\ORM\Mapping as ORM;
 class Compte
 {
     /** @ORM\Id @ORM\Column(type="integer") @ORM\GeneratedValue **/
-
     private $id;
-     /** @ORM\Column(type="string") **/
 
+     /** @ORM\Column(type="string") **/
     private $typeCompte;
-     /** @ORM\Column(type="string") **/
 
-    private $idEntreprise;
-      
-    
-    private $idClientPhysique;
-      /**
+       
+/**
         * @ORM\ManyToOne(targetEntity="Clientparticulier",inversedBy="compte")
       */
+    private $idClientPhysique;
+
+     /** @ORM\Column(type="string") **/ 
     private $NumeroCompte;
-     /** @ORM\Column(type="string") **/
+     
+    /** @ORM\Column(type="string") **/
     private $CleRib;
+
      /** @ORM\Column(type="string") **/
     private $EtatCompte;
+     
      /** @ORM\Column(type="string") **/
     private $DepotInitial;
-     /** @ORM\Column(type="string") **/
-    private $DateOuverture;
+    
      /** @ORM\Column(type="integer") **/
+    private $DateOuverture;
+    
 
    
 
@@ -65,13 +67,13 @@ class Compte
         $this->idEntreprise=$idEntreprise;
     }
 
-    public function getIdClientparticulier()
+    public function getIdClientPhysique()
     {
-        return $this->idClientparticulier;
+        return $this->IdClientPhysique;
     }
-    public function setIdClientparticulier($Clientparticulier)
+    public function setIdClientPhysique($IdClientPhysique)
     {
-        $this->idClientparticulier=$idClientparticulier;
+        $this->IdClientPhysique=$IdClientPhysique;
     }
 
         public function getNumeroCompte()

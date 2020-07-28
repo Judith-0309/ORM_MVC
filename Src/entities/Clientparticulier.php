@@ -34,12 +34,9 @@ class Clientparticulier
     private $nom_employeur;
      /** @ORM\Column(type="string") **/ 
     private $cni;
-    private $numeroCompte;
-    /** @ORM\Column(type="string") **/ 
-     /**
-     * One Clientparticulier as many compte. This is the inverse side.
-     * @OneToMany(targetEntity="compte", mappedBy="Clientparticulier")
-     */
+    /** @ORM\Column(type="string") **/
+    private $numeroCompte; 
+     
 
 
 
