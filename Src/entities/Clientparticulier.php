@@ -145,7 +145,7 @@ public function __construct()
     }
     public function setNomEmployeur($nom_employeur)
     {
-           $this->nomEmployeur=$nom_employeur;
+           $this->nom_employeur=$nom_employeur;
     }
 
         public function getCni()

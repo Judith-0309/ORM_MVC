@@ -4,8 +4,9 @@ use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
 require_once "vendor/autoload.php";
-
-// Create a simple "default" Doctrine ORM configuration for Annotations
+//On crée une fonction getEntity dans laquelleon met le contenu bootstrap
+function getEntity(){
+    // Create a simple "default" Doctrine ORM configuration for Annotations
 $isDevMode = true;
 $proxyDir = null;
 $cache = null;
@@ -16,10 +17,6 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src/entit
 //$config = Setup::createYAMLMetadataConfiguration(array(__DIR__."/config/yaml"), $isDevMode);
 
 // database configuration parameters
-/*$conn = array(
-    'driver' => 'pdo_mysql',
-    'path' => __DIR__ . '/db.sqlite',
-);*/
 $conn = array(
     'dbname' => 'BanqueP',
     'user' => 'root',
@@ -30,3 +27,6 @@ $conn = array(
 
 // obtaining the entity manager
 $entityManager = EntityManager::create($conn, $config);
+// On lui demande de nous retourner la fonction
+return $entityManager;
+}
