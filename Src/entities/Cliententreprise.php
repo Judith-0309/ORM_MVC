@@ -2,7 +2,9 @@
 //les espaces de noms l'annotation qui est une classe dans Doctrine sera mapper à ORM
 use Doctrine\ORM\Mapping as ORM;
 
-
+/**
+ * @ORM\Entity @ORM\Table(name="clientEntreprise")
+ */
 
 class ClientEntreprise
 {
