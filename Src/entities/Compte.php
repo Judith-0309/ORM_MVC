@@ -12,16 +12,20 @@ class Compte
     private $typeCompte;
 
        
-/**
-        * @ORM\ManyToOne(targetEntity="Clientparticulier",inversedBy="compte")
-      */
+   /**
+     * One clientparticulier has many compte. This is the inverse side.
+     * @ORM\OneToMany(targetEntity="Clientparticulier", mappedBy="numeroCompte")
+     */
     private $idClientPhysique;
 
 
      /**
-        * @ORM\ManyToOne(targetEntity="ClientEntreprise",inversedBy="compte")
-      */
+     * One clientEntreprise has many compte. This is the inverse side.
+     * @ORM\OneToMany(targetEntity="ClientEntreprise", mappedBy="numeroCompte")
+     */
      private $idEntreprise;
+
+
     
      /** @ORM\Column(type="string") **/
     private $NumeroCompte;

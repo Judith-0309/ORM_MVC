@@ -34,10 +34,13 @@ class Clientparticulier
     private $nom_employeur;
      /** @ORM\Column(type="string") **/ 
     private $cni;
-    /** @ORM\Column(type="string"),nullable=true **/
-    /**
- * @ORM\ManyToOne(targetEntity="compte", inversedBy="clientparticulier")
- */
+
+    
+     /**
+     * Many compte have one clientEntreprise. This is the owning side.
+     * @ORM\ManyToOne(targetEntity="Compte", inversedBy="idClientPhysique")
+     * @ORM\JoinColumn(name="idcompte", referencedColumnName="id")
+     */
     private $numeroCompte; 
      
 

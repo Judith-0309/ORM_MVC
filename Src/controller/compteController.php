@@ -4,7 +4,7 @@ require_once('./../../src/entities/Compte.php');
 
 $compte = new CompteDb();
 //$compte = new CompteDb();
-extract($_POST);
+//extract($_POST);
 if(isset($_POST)){
     
     $Ouv_compte = new Compte();
@@ -21,7 +21,7 @@ if(isset($_POST)){
 
         $b= $compte->Add($Ouv_compte);
         //var_dump($b);
-        
+       
         //Si l'insertion marche qu'il nous retourne la valeur de a
         if($b!=null)
         {

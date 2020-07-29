@@ -12,7 +12,7 @@ if(isset($_POST['envoyer'])){
         $entreprise->SetNomEntreprise($_POST["nomEntreprise"]);
         $entreprise->SetNinea($_POST["ninea"]);
         $entreprise->SetAdresse($_POST["adresse"]);
-        $entreprise->SetRaison_Sociale($_POST["raisonSociale"]);
+        $entreprise->setRaison_Sociale($_POST["raisonSociale"]);
         $entreprise->SetTelephone($_POST["telephone"]);
         $entreprise->SetEmail($_POST["email"]);
         $entreprise->SetRegistreCom($_POST["registreCom"]);
@@ -22,7 +22,7 @@ if(isset($_POST['envoyer'])){
 
 
         $ab= $principal->Add($entreprise);
-        //Si l'insertion marche qu'il nous retourne la valeur de a
+        //Si l'insertion marche qu'il nous retourne la valeur de b
         if($ab){
             echo "insertion reussie";
         } else {

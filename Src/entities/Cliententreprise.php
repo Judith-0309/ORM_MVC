@@ -23,7 +23,7 @@ class ClientEntreprise
     private $adresse;
 
     /** @ORM\Column(type="string") **/ 
-    private $raisonSociale;
+    private $raison_Sociale;
 
     /** @ORM\Column(type="string") **/ 
     private $telephone;
@@ -34,11 +34,16 @@ class ClientEntreprise
     /** @ORM\Column(type="string") **/ 
     private $RegistreCom;
 
-     /**
- * @ORM\ManyToOne(targetEntity="compte", inversedBy="clientEntreprise")
- */
-private $numeroCompte; 
+     
+    /**
+     * Many compte have one clientEntreprise. This is the owning side.
+     * @ORM\ManyToOne(targetEntity="Compte", inversedBy="idEntreprise")
+     * @ORM\JoinColumn(name="idcompte", referencedColumnName="id")
+     */
+     private $numeroCompte; 
 
+
+  
 
     public function __construct()
 {
@@ -96,9 +101,9 @@ public function getId()
         return $this->Raison_Sociale;
     }
 
-    public function setRaison_Sociale($Raison_Sociale)
+    public function setRaison_Sociale($raison_Sociale)
     {
-        $this->Raison_Sociale = $Raison_Sociale;
+        $this->raison_Sociale = $raison_Sociale;
 
         
     }
