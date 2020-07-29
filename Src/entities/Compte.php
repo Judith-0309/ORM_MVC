@@ -17,7 +17,13 @@ class Compte
       */
     private $idClientPhysique;
 
-     /** @ORM\Column(type="string") **/ 
+
+     /**
+        * @ORM\ManyToOne(targetEntity="ClientEntreprise",inversedBy="compte")
+      */
+     private $idEntreprise;
+    
+     /** @ORM\Column(type="string") **/
     private $NumeroCompte;
      
     /** @ORM\Column(type="string") **/

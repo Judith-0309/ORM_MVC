@@ -34,7 +34,10 @@ class Clientparticulier
     private $nom_employeur;
      /** @ORM\Column(type="string") **/ 
     private $cni;
-    /** @ORM\Column(type="string") **/
+    /** @ORM\Column(type="string"),nullable=true **/
+    /**
+ * @ORM\ManyToOne(targetEntity="compte", inversedBy="clientparticulier")
+ */
     private $numeroCompte; 
      
 

@@ -34,6 +34,11 @@ class ClientEntreprise
     /** @ORM\Column(type="string") **/ 
     private $RegistreCom;
 
+     /**
+ * @ORM\ManyToOne(targetEntity="compte", inversedBy="clientEntreprise")
+ */
+private $numeroCompte; 
+
 
     public function __construct()
 {
